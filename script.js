@@ -371,4 +371,18 @@ if (invitationAudio && audioToggle) {
 
   invitationAudio.addEventListener('pause', () => updateAudioButton(false));
   invitationAudio.addEventListener('play', () => updateAudioButton(true));
+
+  // Pantalla de entrada: el toque en "Entrar con música" permite arrancar la canción
+  const intro = document.querySelector('#intro');
+  if (intro) {
+    intro.querySelectorAll('[data-intro-music]').forEach((button) => {
+      button.addEventListener('click', () => {
+        if (button.dataset.introMusic === 'true') invitationAudio.play().catch(() => {});
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        document.body.classList.remove('intro-open');
+        intro.classList.add('is-hidden');
+        setTimeout(() => intro.remove(), 900);
+      });
+    });
+  }
 }

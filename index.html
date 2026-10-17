@@ -4,14 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eaa0b1">
-  <meta name="description" content="Invitación a los XV de Agostina — 28 de noviembre de 2026">
+  <meta name="description" content="¡Te invito a celebrar mis XV! Sábado 28 de noviembre de 2026 · Salón Adeliz. ¡Te espero!">
   <title>Mis XV Agostina</title>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bloomdate-agostina15.netlify.app/">
+  <meta property="og:title" content="Mis XV Agostina ✨">
+  <meta property="og:description" content="¡Te invito a celebrar mis XV! Sábado 28 de noviembre de 2026 · Salón Adeliz. ¡Te espero!">
+  <meta property="og:image" content="https://bloomdate-agostina15.netlify.app/assets/vista-previa.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mis XV Agostina">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="image" href="assets/intro.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="intro-open">
+  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="Abrir invitación">
+    <div class="intro__sheet">
+      <img src="assets/intro.jpg" alt="Agostina. Elegí cómo querés vivir esta invitación" width="941" height="1672">
+      <button class="intro__hotspot intro__hotspot--music" type="button" data-intro-music="true">Entrar con música</button>
+      <button class="intro__hotspot intro__hotspot--silent" type="button" data-intro-music="false">Entrar sin música</button>
+    </div>
+  </div>
+
   <main>
     <section class="sheet" aria-label="Portada de la invitación">
       <img src="assets/portada.png" alt="" width="941" height="1672">
